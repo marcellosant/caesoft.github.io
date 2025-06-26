@@ -42,7 +42,7 @@ O projeto apresenta informações sobre:
 - **Styling**: [TailwindCSS 3.4.17](https://tailwindcss.com/)
 - **UI Components**: [Radix UI](https://www.radix-ui.com/) + Custom Components
 - **Icons**: [Lucide React](https://lucide.dev/)
-- **Fonts**: Quanta Grotesk Pro + Fluent Font
+- **Fontes**: Quanta Grotesk Pro + Fluent Font
 - **Build**: Static Site Generation (SSG)
 - **Deploy**: GitHub Pages
 
@@ -170,5 +170,5 @@ Curso de Bacharelado em Engenharia de Software
 ---
 
 <div align="center">
-  <strong>CAESoft © 2024 - Conectando estudantes, promovendo conhecimento</strong>
+  <strong>CAESoft © 2025 - Conectando estudantes, promovendo conhecimento</strong>
 </div> 
