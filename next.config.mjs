@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'export',
   distDir: 'docs',
   basePath: '',
+  assetPrefix: '',
   trailingSlash: true,
   images: {
     unoptimized: true
