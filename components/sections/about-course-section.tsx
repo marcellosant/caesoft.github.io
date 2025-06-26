@@ -109,12 +109,23 @@ const professors = [
 
 const optionalSubjects = [
   "Disciplinas Optativas (160h total)",
-  "Tópicos Avançados em Programação",
-  "Inteligência Artificial",
-  "Segurança da Informação",
-  "Desenvolvimento Web Avançado",
-  "Computação em Nuvem",
-  "DevOps e Integração Contínua"
+  "Educação Sócio Ambiental (80h)",
+  "Linguagem Brasileira de Sinais (80h)",
+  "Direitos Humanos e dos Povos Tradicionais (80h)",
+  "Acessibilidade e Inclusão Digital (80h)",
+  "Tecnologia em Contexto Social (80h)",
+  "Tópicos Especiais em Redes de Computadores (80h)",
+  "Tópicos Especiais em Banco de Dados (80h)",
+  "Tópicos Especiais em Engenharia de Software (80h)",
+  "Inteligência Computacional (80h)",
+  "Multimídia e Interatividade (80h)",
+  "Marketing Relacional (80h)",
+  "Agilidade em Software (80h)",
+  "Gerência da Conectividade Computacional (80h)",
+  "Introdução em Desenvolvimento de Jogos Digitais (80h)",
+  "Tópicos Especiais em Computação (80h)",
+  "Logistica e Supply Chain (80h)",
+  "Tecnologias Assistivas (80h)"
 ]
 
 export const AboutCourseSection = () => {
@@ -147,7 +158,7 @@ export const AboutCourseSection = () => {
                 <Users className="text-caesoft-green mx-auto mb-4" size={48} />
                 <h3 className="text-xl font-semibold text-caesoft-light mb-3">4 Campi</h3>
                 <p className="text-light-dimmed">
-                  Turmas em Ananindeua (Campus XXII), Castanhal, Redenção e Parauapebas.
+                  Turmas em Ananindeua, Castanhal, Redenção e Parauapebas.
                 </p>
               </CardContent>
             </Card>
