@@ -95,16 +95,16 @@ const disciplinesBySemester = [
 ]
 
 const professors = [
-  { name: "Anderson Jorge Serra da Costa", title: "Mestre", specialization: "Ciência da Computação (UFPA)" },
-  { name: "Antônio Marcos Cardoso Silva", title: "Mestre", specialization: "Informática (UFPR)" },
-  { name: "Carlos Benedito Barreiros Gutierrez", title: "Doutor e Mestre", specialization: "Dr., Me. Ciências Ambientais (UFPA)" },
-  { name: "Gleisson Amaral Mendes", title: "Mestre e Especialista", specialization: "Me. Engenharia Industrial (UFPA), Es. Redes de Computadores (Unama)" },
-  { name: "Ítalo Flexa Di Paolo", title: "Doutor e Mestre", specialization: "Dr. Engenharia Elétrica: Computação Aplicada (UFPA), Me. Engenharia Elétrica: Sistemas de Energia Elétrica (UFPA)" },
-  { name: "Jairo Fadul de Lima", title: "Mestre e Especialista", specialization: "Me. Engenharia de Processos (UFPA), Es. Análise de Sistemas (UFPA)" },
-  { name: "Paulo Sérgio Rodrigues Lima", title: "Doutor, Mestre e Especialista", specialization: "Dr. Engenharia Elétrica com ênfase em Computação Aplicada (UFPA), Me. Ciências da Computação (UFRGS), Es. Analytics e Business Intelligence (PUC-MG)" },
-  { name: "Renato Ferreira Carr", title: "Mestre e Especialista", specialization: "Me. Ciencias de la Computación (Universidad de la Habana), Me. Educação (Unesa), Es. Direito Educacional (FUI), Es. Engenharia de Segurança do Trabalho (PUC-GO), Es. Telecomunicações (Unesa), Es. Análise de Sistemas (Unesa)" },
-  { name: "Thiago Nicolau Magalhães de Souza Conte", title: "Doutor, Mestre e Especialista", specialization: "Dr. Engenharia Elétrica - Inteligência Computacional (UFPA), Me. Engenharia Elétrica (UFPA), Es. Docência para a Educação Profissional (SENAC), Es. Desenvolvimento de Sistemas Baseado em Software Livre (Unama)" },
-  { name: "Wanderson Alexandre da Silva Quinto", title: "Doutor, Mestre e Especialista", specialization: "Dr. Psicologia (UFPA), Me. Engenharia Elétrica (UFPA), Es. Habilidades e Competências Docentes (FACI), Es. Redes de Computadores (UFPA)" }
+  { name: "Anderson Jorge Serra da Costa", title: "Mestre", specialization: "Ciência da Computação (UFPA)", lattes : ""},
+  { name: "Antônio Marcos Cardoso Silva", title: "Mestre", specialization: "Informática (UFPR)", lattes : "" },
+  { name: "Carlos Benedito Barreiros Gutierrez", title: "Doutor e Mestre", specialization: "Dr., Me. Ciências Ambientais (UFPA)", lattes : "" },
+  { name: "Gleisson Amaral Mendes", title: "Mestre e Especialista", specialization: "Me. Engenharia Industrial (UFPA), Es. Redes de Computadores (Unama)", lattes : ""},
+  { name: "Ítalo Flexa Di Paolo", title: "Doutor e Mestre", specialization: "Dr. Engenharia Elétrica: Computação Aplicada (UFPA), Me. Engenharia Elétrica: Sistemas de Energia Elétrica (UFPA)", lattes : "" },
+  { name: "Jairo Fadul de Lima", title: "Mestre e Especialista", specialization: "Me. Engenharia de Processos (UFPA), Es. Análise de Sistemas (UFPA)", lattes : "" },
+  { name: "Paulo Sérgio Rodrigues Lima", title: "Doutor, Mestre e Especialista", specialization: "Dr. Engenharia Elétrica com ênfase em Computação Aplicada (UFPA), Me. Ciências da Computação (UFRGS), Es. Analytics e Business Intelligence (PUC-MG)", lattes : "" },
+  { name: "Renato Ferreira Carr", title: "Mestre e Especialista", specialization: "Me. Ciencias de la Computación (Universidad de la Habana), Me. Educação (Unesa), Es. Direito Educacional (FUI), Es. Engenharia de Segurança do Trabalho (PUC-GO), Es. Telecomunicações (Unesa), Es. Análise de Sistemas (Unesa)", lattes : "" },
+  { name: "Thiago Nicolau Magalhães de Souza Conte", title: "Doutor, Mestre e Especialista", specialization: "Dr. Engenharia Elétrica - Inteligência Computacional (UFPA), Me. Engenharia Elétrica (UFPA), Es. Docência para a Educação Profissional (SENAC), Es. Desenvolvimento de Sistemas Baseado em Software Livre (Unama)", lattes : "" },
+  { name: "Wanderson Alexandre da Silva Quinto", title: "Doutor, Mestre e Especialista", specialization: "Dr. Psicologia (UFPA), Me. Engenharia Elétrica (UFPA), Es. Habilidades e Competências Docentes (FACI), Es. Redes de Computadores (UFPA)" , lattes : ""}
 ]
 
 const optionalSubjects = [
