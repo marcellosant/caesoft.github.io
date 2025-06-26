@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Section } from "@/components/section"
 import { Code, Users, Lightbulb, Download, BookOpen, GraduationCap, UserCheck, ExternalLink, FileText } from "lucide-react"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 const disciplinesBySemester = [
   {
@@ -129,24 +130,26 @@ const optionalSubjects = [
 ]
 
 export const AboutCourseSection = () => {
+  const isMobile = useIsMobile()
+  
   return (
     <Section id="course" className="bg-gradient-to-br from-caesoft-navy/50 to-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-caesoft-light mb-6">
+          <div className={`text-center ${isMobile ? 'mb-8' : 'mb-16'}`}>
+            <h2 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl'} font-bold text-caesoft-light ${isMobile ? 'mb-4' : 'mb-6'}`}>
               Bacharelado em <span className="text-gradient">Engenharia de Software</span>
             </h2>
-            <p className="text-xl text-light-dimmed max-w-3xl mx-auto">
+            <p className={`${isMobile ? 'text-lg' : 'text-xl'} text-light-dimmed max-w-3xl mx-auto`}>
               O Bacharel em Engenharia de Software contará com uma formação voltada para o desenvolvimento do raciocínio lógico e conhecimentos matemáticos, científicos, tecnológicos e instrumentais computacionais que estimulam sua atuação crítica e criativa na identificação e resolução de problemas voltados aos diversos setores da sociedade.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className={`grid ${isMobile ? 'grid-cols-1 gap-4' : 'md:grid-cols-3 gap-8'} ${isMobile ? 'mb-8' : 'mb-12'}`}>
             <Card className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl">
-              <CardContent className="p-6 text-center">
-                <Code className="text-caesoft-purple mx-auto mb-4" size={48} />
-                <h3 className="text-xl font-semibold text-caesoft-light mb-3">8 Semestres</h3>
+              <CardContent className={`${isMobile ? 'p-4' : 'p-6'} text-center`}>
+                <Code className="text-caesoft-purple mx-auto mb-4" size={isMobile ? 40 : 48} />
+                <h3 className={`${isMobile ? 'text-lg' : 'text-xl'} font-semibold text-caesoft-light ${isMobile ? 'mb-2' : 'mb-3'}`}>8 Semestres</h3>
                 <p className="text-light-dimmed">
                   Curso com duração de 4 anos, totalizando 3.880 horas aula distribuídas em 8 semestres.
                 </p>
@@ -154,9 +157,9 @@ export const AboutCourseSection = () => {
             </Card>
 
             <Card className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl">
-              <CardContent className="p-6 text-center">
-                <Users className="text-caesoft-green mx-auto mb-4" size={48} />
-                <h3 className="text-xl font-semibold text-caesoft-light mb-3">4 Campi</h3>
+              <CardContent className={`${isMobile ? 'p-4' : 'p-6'} text-center`}>
+                <Users className="text-caesoft-green mx-auto mb-4" size={isMobile ? 40 : 48} />
+                <h3 className={`${isMobile ? 'text-lg' : 'text-xl'} font-semibold text-caesoft-light ${isMobile ? 'mb-2' : 'mb-3'}`}>4 Campi</h3>
                 <p className="text-light-dimmed">
                   Turmas em Ananindeua, Castanhal, Redenção e Parauapebas.
                 </p>
@@ -164,9 +167,9 @@ export const AboutCourseSection = () => {
             </Card>
 
             <Card className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl">
-              <CardContent className="p-6 text-center">
-                <Lightbulb className="text-caesoft-light mx-auto mb-4" size={48} />
-                <h3 className="text-xl font-semibold text-caesoft-light mb-3">Reconhecido</h3>
+              <CardContent className={`${isMobile ? 'p-4' : 'p-6'} text-center`}>
+                <Lightbulb className="text-caesoft-light mx-auto mb-4" size={isMobile ? 40 : 48} />
+                <h3 className={`${isMobile ? 'text-lg' : 'text-xl'} font-semibold text-caesoft-light ${isMobile ? 'mb-2' : 'mb-3'}`}>Reconhecido</h3>
                 <p className="text-light-dimmed">
                   Curso reconhecido pelo MEC com formação sólida para pesquisa e desenvolvimento.
                 </p>
@@ -175,11 +178,11 @@ export const AboutCourseSection = () => {
           </div>
 
           {/* Course Objective */}
-          <div className="mb-12">
+          <div className={`${isMobile ? 'mb-8' : 'mb-12'}`}>
             <Card className="glass-effect-light border-purple-soft">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-caesoft-light mb-4">Objetivo Geral</h3>
-                <p className="text-light-dimmed leading-relaxed text-lg">
+              <CardContent className={`${isMobile ? 'p-6' : 'p-8'}`}>
+                <h3 className={`${isMobile ? 'text-xl' : 'text-2xl'} font-bold text-caesoft-light ${isMobile ? 'mb-3' : 'mb-4'}`}>Objetivo Geral</h3>
+                <p className={`text-light-dimmed leading-relaxed ${isMobile ? 'text-base' : 'text-lg'}`}>
                   Formar profissionais da área de Computação e Informática para atuação em pesquisa, gestão, desenvolvimento, uso e avaliação de tecnologias de informação aplicadas nas organizações com uma formação alicerçada nos pilares, tecnológicos, organizacionais e humanísticos.
                 </p>
               </CardContent>
@@ -187,16 +190,16 @@ export const AboutCourseSection = () => {
           </div>
 
           {/* Professional Profile */}
-          <div className="mb-12">
+          <div className={`${isMobile ? 'mb-8' : 'mb-12'}`}>
             <Card className="glass-effect-light border-purple-soft">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-caesoft-light mb-4">Perfil Profissional</h3>
-                <p className="text-light-dimmed leading-relaxed text-lg mb-4">
+              <CardContent className={`${isMobile ? 'p-6' : 'p-8'}`}>
+                <h3 className={`${isMobile ? 'text-xl' : 'text-2xl'} font-bold text-caesoft-light ${isMobile ? 'mb-3' : 'mb-4'}`}>Perfil Profissional</h3>
+                <p className={`text-light-dimmed leading-relaxed ${isMobile ? 'text-base mb-3' : 'text-lg mb-4'}`}>
                   O curso é indicado para todo interessado no desenvolvimento de atividades com implementações tecnológicas na área da Computação.
                   <br></br>
                    O interessado deve ter pensamento crítico e sensível aos efeitos que a tecnologia possa desencadear no ser humano e intenção de alcançar o desenvolvimento da tecnologia na sua sociedade.
                 </p>
-                <p className="text-light-dimmed leading-relaxed text-lg">
+                <p className={`text-light-dimmed leading-relaxed ${isMobile ? 'text-base' : 'text-lg'}`}>
                   Assim, o graduado obtém uma formação sólida para atuar na pesquisa e no desenvolvimento na área de Engenharia de Software e noutras áreas relacionadas à Computação.
                 </p>
               </CardContent>
@@ -204,10 +207,10 @@ export const AboutCourseSection = () => {
           </div>
 
           {/* Access Requirements */}
-          <div className="mb-12">
+          <div className={`${isMobile ? 'mb-8' : 'mb-12'}`}>
             <Card className="glass-effect-light border-purple-soft">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-caesoft-light mb-4">Requisitos e Formas de Acesso</h3>
+              <CardContent className={`${isMobile ? 'p-6' : 'p-8'}`}>
+                <h3 className={`${isMobile ? 'text-xl' : 'text-2xl'} font-bold text-caesoft-light ${isMobile ? 'mb-3' : 'mb-4'}`}>Requisitos e Formas de Acesso</h3>
                 <div className="space-y-4">
                   <p className="text-light-dimmed leading-relaxed">
                     O acesso se dá por meio do vestibular próprio da Universidade do Estado do Pará, geralmente com a nota do <strong className="text-caesoft-green">Exame Nacional do Ensino Médio (ENEM)</strong>, conforme o ingresso nos Cursos de Graduação da Instituição.
@@ -224,40 +227,40 @@ export const AboutCourseSection = () => {
           </div>
 
           {/* Course Structure */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <Badge variant="outline" className="!bg-caesoft-purple hover:!brightness-110 !text-white !border-caesoft-purple px-4 py-2 transition-all duration-200">
+          <div className={`${isMobile ? 'mb-8' : 'mb-12'}`}>
+            <div className={`flex flex-wrap justify-center ${isMobile ? 'gap-2' : 'gap-3'} ${isMobile ? 'mb-6' : 'mb-8'}`}>
+              <Badge variant="outline" className={`!bg-caesoft-purple hover:!brightness-110 !text-white !border-caesoft-purple ${isMobile ? 'px-3 py-1 text-xs' : 'px-4 py-2'} transition-all duration-200`}>
                 3.880h Total
               </Badge>
-              <Badge variant="outline" className="!bg-caesoft-green hover:!brightness-110 !text-white !border-caesoft-green px-4 py-2 transition-all duration-200">
+              <Badge variant="outline" className={`!bg-caesoft-green hover:!brightness-110 !text-white !border-caesoft-green ${isMobile ? 'px-3 py-1 text-xs' : 'px-4 py-2'} transition-all duration-200`}>
                 3.160h Disciplinas
               </Badge>
-              <Badge variant="outline" className="!bg-caesoft-navy hover:!brightness-110 !text-white !border-caesoft-navy px-4 py-2 transition-all duration-200">
+              <Badge variant="outline" className={`!bg-caesoft-navy hover:!brightness-110 !text-white !border-caesoft-navy ${isMobile ? 'px-3 py-1 text-xs' : 'px-4 py-2'} transition-all duration-200`}>
                 600h Atividades Complementares
               </Badge>
-              <Badge variant="outline" className="!bg-caesoft-purple/80 hover:!brightness-110 !text-white !border-caesoft-purple/80 px-4 py-2 transition-all duration-200">
+              <Badge variant="outline" className={`!bg-caesoft-purple/80 hover:!brightness-110 !text-white !border-caesoft-purple/80 ${isMobile ? 'px-3 py-1 text-xs' : 'px-4 py-2'} transition-all duration-200`}>
                 192h Estágio
               </Badge>
-              <Badge variant="outline" className="!bg-caesoft-green/80 hover:!brightness-110 !text-white !border-caesoft-green/80 px-4 py-2 transition-all duration-200">
+              <Badge variant="outline" className={`!bg-caesoft-green/80 hover:!brightness-110 !text-white !border-caesoft-green/80 ${isMobile ? 'px-3 py-1 text-xs' : 'px-4 py-2'} transition-all duration-200`}>
                 80h TCC
               </Badge>
             </div>
           </div>
 
           {/* Disciplines Grid */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className={`grid ${isMobile ? 'grid-cols-1 gap-4' : 'md:grid-cols-2 gap-6'} ${isMobile ? 'mb-8' : 'mb-12'}`}>
             {disciplinesBySemester.map((semester, index) => (
               <Card key={index} className="glass-effect-light border-purple-soft">
-                <CardHeader>
+                <CardHeader className={isMobile ? 'pb-3' : ''}>
                   <CardTitle className="text-caesoft-light flex items-center gap-2">
-                    <BookOpen className="text-caesoft-purple" size={20} />
-                    {semester.semester}
+                    <BookOpen className="text-caesoft-purple" size={isMobile ? 18 : 20} />
+                    <span className={isMobile ? 'text-lg' : ''}>{semester.semester}</span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
+                <CardContent className={isMobile ? 'pt-0' : ''}>
+                  <ul className={`${isMobile ? 'space-y-1' : 'space-y-2'}`}>
                     {semester.subjects.map((subject, idx) => (
-                      <li key={idx} className="text-light-dimmed text-sm flex items-start gap-2">
+                      <li key={idx} className={`text-light-dimmed ${isMobile ? 'text-xs' : 'text-sm'} flex items-start gap-2`}>
                         <span className="w-2 h-2 bg-caesoft-purple rounded-full mt-2 flex-shrink-0"></span>
                         {subject}
                       </li>
@@ -269,17 +272,17 @@ export const AboutCourseSection = () => {
           </div>
 
           {/* Optional Subjects */}
-          <Card className="glass-effect-light border-purple-soft mb-8">
-            <CardHeader>
+          <Card className={`glass-effect-light border-purple-soft ${isMobile ? 'mb-6' : 'mb-8'}`}>
+            <CardHeader className={isMobile ? 'pb-3' : ''}>
               <CardTitle className="text-caesoft-light flex items-center gap-2">
-                <Code className="text-caesoft-green" size={20} />
-                Disciplinas Optativas
+                <Code className="text-caesoft-green" size={isMobile ? 18 : 20} />
+                <span className={isMobile ? 'text-lg' : ''}>Disciplinas Optativas</span>
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-2 gap-4">
+            <CardContent className={isMobile ? 'pt-0' : ''}>
+              <div className={`grid ${isMobile ? 'grid-cols-1 gap-2' : 'md:grid-cols-2 gap-4'}`}>
                 {optionalSubjects.map((subject, idx) => (
-                  <div key={idx} className="text-light-dimmed text-sm flex items-center gap-2">
+                  <div key={idx} className={`text-light-dimmed ${isMobile ? 'text-xs' : 'text-sm'} flex items-center gap-2`}>
                     <span className="w-2 h-2 bg-caesoft-green rounded-full flex-shrink-0"></span>
                     {subject}
                   </div>
@@ -289,20 +292,20 @@ export const AboutCourseSection = () => {
           </Card>
 
           {/* Professors */}
-          <Card className="glass-effect-light border-purple-soft mb-8">
-            <CardHeader>
+          <Card className={`glass-effect-light border-purple-soft ${isMobile ? 'mb-6' : 'mb-8'}`}>
+            <CardHeader className={isMobile ? 'pb-3' : ''}>
               <CardTitle className="text-caesoft-light flex items-center gap-2">
-                <GraduationCap className="text-caesoft-purple" size={20} />
-                Corpo Docente
+                <GraduationCap className="text-caesoft-purple" size={isMobile ? 18 : 20} />
+                <span className={isMobile ? 'text-lg' : ''}>Corpo Docente</span>
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-2 gap-4">
+            <CardContent className={isMobile ? 'pt-0' : ''}>
+              <div className={`grid ${isMobile ? 'grid-cols-1 gap-3' : 'md:grid-cols-2 gap-4'}`}>
                 {professors.map((prof, idx) => (
-                  <div key={idx} className="bg-white/5 rounded-lg p-4 border border-white/10">
-                    <h4 className="text-caesoft-light font-semibold">{prof.name}</h4>
-                    <p className="text-caesoft-green text-sm">{prof.title}</p>
-                    <p className="text-light-dimmed text-xs">{prof.specialization}</p>
+                  <div key={idx} className={`bg-white/5 rounded-lg ${isMobile ? 'p-3' : 'p-4'} border border-white/10`}>
+                    <h4 className={`text-caesoft-light font-semibold ${isMobile ? 'text-sm' : ''}`}>{prof.name}</h4>
+                    <p className={`text-caesoft-green ${isMobile ? 'text-xs' : 'text-sm'}`}>{prof.title}</p>
+                    <p className={`text-light-dimmed ${isMobile ? 'text-xs' : 'text-xs'}`}>{prof.specialization}</p>
                   </div>
                 ))}
               </div>
@@ -310,23 +313,23 @@ export const AboutCourseSection = () => {
           </Card>
 
           {/* Academic Structure */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className={`grid ${isMobile ? 'grid-cols-1 gap-4' : 'md:grid-cols-2 gap-6'} ${isMobile ? 'mb-8' : 'mb-12'}`}>
             <Card className="glass-effect-light border-purple-soft">
-              <CardHeader>
+              <CardHeader className={isMobile ? 'pb-3' : ''}>
                 <CardTitle className="text-caesoft-light flex items-center gap-2">
-                  <UserCheck className="text-caesoft-green" size={20} />
-                  Colegiado do Curso
+                  <UserCheck className="text-caesoft-green" size={isMobile ? 18 : 20} />
+                  <span className={isMobile ? 'text-lg' : ''}>Colegiado do Curso</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="text-light-dimmed text-sm">
+              <CardContent className={isMobile ? 'pt-0' : ''}>
+                <div className={`${isMobile ? 'space-y-2' : 'space-y-3'}`}>
+                  <div className={`text-light-dimmed ${isMobile ? 'text-xs' : 'text-sm'}`}>
                     <span className="text-caesoft-light font-semibold">Coordenação:</span> Responsável pela gestão acadêmica e administrativa do curso
                   </div>
-                  <div className="text-light-dimmed text-sm">
+                  <div className={`text-light-dimmed ${isMobile ? 'text-xs' : 'text-sm'}`}>
                     <span className="text-caesoft-light font-semibold">Representação:</span> Docentes e discentes do curso
                   </div>
-                  <div className="text-light-dimmed text-sm">
+                  <div className={`text-light-dimmed ${isMobile ? 'text-xs' : 'text-sm'}`}>
                     <span className="text-caesoft-light font-semibold">Função:</span> Deliberações acadêmicas e pedagógicas
                   </div>
                 </div>
@@ -334,21 +337,21 @@ export const AboutCourseSection = () => {
             </Card>
 
             <Card className="glass-effect-light border-purple-soft">
-              <CardHeader>
+              <CardHeader className={isMobile ? 'pb-3' : ''}>
                 <CardTitle className="text-caesoft-light flex items-center gap-2">
-                  <Users className="text-caesoft-purple" size={20} />
-                  NDE - Núcleo Docente Estruturante
+                  <Users className="text-caesoft-purple" size={isMobile ? 18 : 20} />
+                  <span className={isMobile ? 'text-lg' : ''}>NDE - Núcleo Docente Estruturante</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="text-light-dimmed text-sm">
+              <CardContent className={isMobile ? 'pt-0' : ''}>
+                <div className={`${isMobile ? 'space-y-2' : 'space-y-3'}`}>
+                  <div className={`text-light-dimmed ${isMobile ? 'text-xs' : 'text-sm'}`}>
                     <span className="text-caesoft-light font-semibold">Composição:</span> Docentes com titulação acadêmica obtida em programas de pós-graduação stricto sensu
                   </div>
-                  <div className="text-light-dimmed text-sm">
+                  <div className={`text-light-dimmed ${isMobile ? 'text-xs' : 'text-sm'}`}>
                     <span className="text-caesoft-light font-semibold">Função:</span> Acompanhamento, atualização e consolidação do PPC
                   </div>
-                  <div className="text-light-dimmed text-sm">
+                  <div className={`text-light-dimmed ${isMobile ? 'text-xs' : 'text-sm'}`}>
                     <span className="text-caesoft-light font-semibold">Regime:</span> Tempo integral ou parcial
                   </div>
                 </div>
@@ -358,9 +361,9 @@ export const AboutCourseSection = () => {
 
           {/* Action Buttons */}
           <div className="text-center">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4">
+            <div className={`flex ${isMobile ? 'flex-col gap-3' : 'flex-col sm:flex-row gap-4'} justify-center items-center ${isMobile ? 'mb-3' : 'mb-4'}`}>
               <Button 
-                size="lg" 
+                size={isMobile ? "default" : "lg"}
                 className="bg-caesoft-green hover:bg-caesoft-green/90 text-caesoft-navy w-full sm:w-auto"
                 onClick={() => window.open('https://drive.google.com/file/d/1xpjfaVOdWzTOClDeGv5gXGOmgJgjCc4N/view?usp=drive_link', '_blank')}
               >
@@ -369,7 +372,7 @@ export const AboutCourseSection = () => {
               </Button>
               
               <Button 
-                size="lg" 
+                size={isMobile ? "default" : "lg"}
                 className="bg-caesoft-purple hover:bg-caesoft-purple/90 text-white w-full sm:w-auto"
                 onClick={() => window.open('https://drive.google.com/file/d/1fxje6407EnBsab_yC0YJ0zx9ou6BMXMM/view?usp=drive_link', '_blank')}
               >
@@ -378,7 +381,7 @@ export const AboutCourseSection = () => {
               </Button>
               
               <Button 
-                size="lg" 
+                size={isMobile ? "default" : "lg"}
                 variant="outline"
                 className="border-caesoft-light text-caesoft-light bg-transparent hover:bg-caesoft-light hover:text-caesoft-navy w-full sm:w-auto"
                 onClick={() => window.open('https://ccnt.uepa.br/bacharelado-em-engenharia-de-software/', '_blank')}
@@ -387,7 +390,7 @@ export const AboutCourseSection = () => {
                 Saiba Mais no CCNT
               </Button>
             </div>
-            <p className="text-light-dimmed text-sm">
+            <p className={`text-light-dimmed ${isMobile ? 'text-xs' : 'text-sm'}`}>
               Acesse documentos oficiais e informações completas sobre o curso.
             </p>
           </div>

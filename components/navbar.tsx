@@ -14,9 +14,8 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
 
-      // Detectar seção ativa
       const sections = ["home", "about", "course", "campus", "resources", "partners"]
-      const scrollPosition = window.scrollY + 100 // Offset para melhor detecção
+      const scrollPosition = window.scrollY + 100
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i])
@@ -65,11 +64,11 @@ export function Navbar() {
                 type="button"
               >
                 <Image 
-                  src="purplelogo.png" 
+                  src="caesoftwhite.png" 
                   alt="CAESoft Logo" 
-                  width={40}
-                  height={40}
-                  className="w-10 h-10 object-contain"
+                  width={1119}
+                  height={556}
+                  className="w-20 h-10 object-contain"
                 />
               </button>
             </div>

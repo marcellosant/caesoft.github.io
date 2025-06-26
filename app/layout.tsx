@@ -38,19 +38,47 @@ export const metadata: Metadata = {
     siteName: 'CAESoft UEPA',
     images: [
       {
-        url: '/purplelogo.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'CAESoft - Centro Acadêmico de Engenharia de Software UEPA',
         type: 'image/png',
       },
       {
-        url: '/whitelogo.png',
+        url: '/og-image-square.png',
         width: 1200,
-        height: 630,
-        alt: 'CAESoft UEPA Logo Branco',
+        height: 1200,
+        alt: 'CAESoft UEPA Logo',
         type: 'image/png',
       }
+    ],
+  },
+  
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CAESoft - Centro Acadêmico de Engenharia de Software UEPA',
+    description: 'CAESoft é o Centro Acadêmico de Engenharia de Software da Universidade do Estado do Pará (UEPA). Conectando estudantes, promovendo conhecimento e construindo o futuro da tecnologia no Pará.',
+    images: ['/og-image.png'],
+    creator: '@caesoft_uepa',
+    site: '@caesoft_uepa',
+  },
+  
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/safari-pinned-tab.svg',
+        color: '#8B5CF6',
+      },
     ],
   },
   
@@ -59,19 +87,19 @@ export const metadata: Metadata = {
   other: {
     'theme-color': '#8B5CF6',
     'msapplication-TileColor': '#8B5CF6',
-    'msapplication-TileImage': '/purplelogo.png',
+    'msapplication-TileImage': '/mstile-144x144.png',
     
     'discord:title': 'CAESoft - Centro Acadêmico de Engenharia de Software UEPA',
     'discord:description': 'Centro Acadêmico de Engenharia de Software da UEPA. Conectando estudantes e promovendo conhecimento em tecnologia.',
-    'discord:image': '/purplelogo.png',
+    'discord:image': '/og-image.png',
     
     'whatsapp:title': 'CAESoft UEPA',
     'whatsapp:description': 'Centro Acadêmico de Engenharia de Software da Universidade do Estado do Pará',
-    'whatsapp:image': '/purplelogo.png',
+    'whatsapp:image': '/og-image.png',
     
     'telegram:title': 'CAESoft UEPA',
     'telegram:description': 'Centro Acadêmico de Engenharia de Software da UEPA',
-    'telegram:image': '/purplelogo.png',
+    'telegram:image': '/og-image.png',
   },
   
   robots: {
@@ -100,8 +128,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Favicon */}
-        <link rel="icon" href="/purplelogo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/purplelogo.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         
         {/* PWA Meta Tags */}
@@ -124,7 +153,7 @@ export default function RootLayout({
               "name": "CAESoft - Centro Acadêmico de Engenharia de Software UEPA",
               "alternateName": "CAESoft UEPA",
               "url": "https://caesoft.github.io",
-              "logo": "https://caesoft.github.io/purplelogo.png",
+              "logo": "https://caesoft.github.io/og-image-square.png",
               "description": "Centro Acadêmico de Engenharia de Software da Universidade do Estado do Pará (UEPA). Conectando estudantes, promovendo conhecimento e construindo o futuro da tecnologia no Pará.",
               "foundingDate": "2024",
               "address": {
