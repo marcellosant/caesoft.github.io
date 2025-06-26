@@ -132,7 +132,7 @@ export function Footer() {
           {/* Copyright */}
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 pt-4">
             <p className="text-light-muted text-sm">
-              © {currentYear} Desenvolvido por <a href="https://www.jhermesn.dev" className="text-caesoft-green hover:text-caesoft-green/80 transition-colors duration-300">Jorge Hermes</a> para o <a href="https://caesoft.github.io" className="text-caesoft-green hover:text-caesoft-green/80 transition-colors duration-300">CAESoft</a> - Centro Acadêmico de Engenharia de Software da UEPA. 
+              © {currentYear} Desenvolvido por <a href="https://www.jhermesn.dev" className="text-caesoft-green hover:text-caesoft-green/80 transition-colors duration-300">Jorge Hermes</a> e <a href="https://github.com/valdemirofacundo" className="text-caesoft-green hover:text-caesoft-green/80 transition-colors duration-300">Valdemiro Facundo</a> para o <a href="https://caesoft.github.io" className="text-caesoft-green hover:text-caesoft-green/80 transition-colors duration-300">CAESoft</a> - Centro Acadêmico de Engenharia de Software da UEPA. 
               Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 text-sm">
