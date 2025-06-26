@@ -22,7 +22,7 @@ const disciplinesBySemester = [
     semester: "2º Semestre", 
     subjects: [
       "Estatística Aplicada a Informática (60h)",
-      "Análise Orientada à Objetos (80h)",
+      "Análise Orientada a Objetos (80h)",
       "Modelagem de Dados (60h)",
       "Estrutura de Dados, Pesquisa e Ordenação (80h)",
       "Programação Web (80h)"
@@ -45,7 +45,7 @@ const disciplinesBySemester = [
       "Programação Orientada a Objetos II (80h)",
       "Análise e Projeto de Software (80h)",
       "Banco de Dados II (80h)",
-      "Sistemas Multirobóticos (60h)",
+      "Sistemas Multirrobóticos (60h)",
       "Projeto Integrado I (80h)"
     ]
   },
@@ -77,7 +77,7 @@ const disciplinesBySemester = [
       "Projeto de Redes e Segurança (80h)",
       "Estimativa de Software (80h)",
       "Realidade Virtual (60h)",
-      "Interação Humano Computador (80h)",
+      "Interação Humano-Computador (80h)",
       "Optativa (80h)"
     ]
   },
@@ -95,22 +95,22 @@ const disciplinesBySemester = [
 ]
 
 const professors = [
-  { name: "Anderson Jorge Serra da Costa", title: "Mestre", specialization: "Ciência da Computação" },
-  { name: "Antônio Marcos Cardoso Silva", title: "Mestre", specialization: "Informática" },
-  { name: "Carlos Benedito Barreiros Gutierrez", title: "Mestre", specialization: "Ciências Ambientais" },
-  { name: "Gleisson Amaral Mendes", title: "Mestre", specialization: "Engenharia Industrial" },
-  { name: "Ítalo Flexa Di Paolo", title: "Mestre", specialization: "Engenharia Elétrica" },
-  { name: "Jairo Fadul de Lima", title: "Mestre", specialization: "Engenharia de Processos" },
-  { name: "Paulo Sérgio Rodrigues Lima", title: "Doutor", specialization: "Engenharia Elétrica com ênfase em Computação Aplicada" },
-  { name: "Renato Ferreira Carr", title: "Mestre", specialization: "Educação e Ciências da Computação" },
-  { name: "Thiago Nicolau Magalhães de Souza Conte", title: "Mestre", specialization: "Engenharia Elétrica - Inteligência Computacional" },
-  { name: "Wanderson Alexandre da Silva Quinto", title: "Mestre", specialization: "Engenharia Elétrica" }
+  { name: "Anderson Jorge Serra da Costa", title: "Mestre", specialization: "Ciência da Computação (UFPA)" },
+  { name: "Antônio Marcos Cardoso Silva", title: "Mestre", specialization: "Informática (UFPR)" },
+  { name: "Carlos Benedito Barreiros Gutierrez", title: "Doutor e Mestre", specialization: "Dr., Me. Ciências Ambientais (UFPA)" },
+  { name: "Gleisson Amaral Mendes", title: "Mestre e Especialista", specialization: "Me. Engenharia Industrial (UFPA), Es. Redes de Computadores (Unama)" },
+  { name: "Ítalo Flexa Di Paolo", title: "Doutor e Mestre", specialization: "Dr. Engenharia Elétrica: Computação Aplicada (UFPA), Me. Engenharia Elétrica: Sistemas de Energia Elétrica (UFPA)" },
+  { name: "Jairo Fadul de Lima", title: "Mestre e Especialista", specialization: "Me. Engenharia de Processos (UFPA), Es. Análise de Sistemas (UFPA)" },
+  { name: "Paulo Sérgio Rodrigues Lima", title: "Doutor, Mestre e Especialista", specialization: "Dr. Engenharia Elétrica com ênfase em Computação Aplicada (UFPA), Me. Ciências da Computação (UFRGS), Es. Analytics e Business Intelligence (PUC-MG)" },
+  { name: "Renato Ferreira Carr", title: "Mestre e Especialista", specialization: "Me. Ciencias de la Computación (Universidad de la Habana), Me. Educação (Unesa), Es. Direito Educacional (FUI), Es. Engenharia de Segurança do Trabalho (PUC-GO), Es. Telecomunicações (Unesa), Es. Análise de Sistemas (Unesa)" },
+  { name: "Thiago Nicolau Magalhães de Souza Conte", title: "Doutor, Mestre e Especialista", specialization: "Dr. Engenharia Elétrica - Inteligência Computacional (UFPA), Me. Engenharia Elétrica (UFPA), Es. Docência para a Educação Profissional (SENAC), Es. Desenvolvimento de Sistemas Baseado em Software Livre (Unama)" },
+  { name: "Wanderson Alexandre da Silva Quinto", title: "Doutor, Mestre e Especialista", specialization: "Dr. Psicologia (UFPA), Me. Engenharia Elétrica (UFPA), Es. Habilidades e Competências Docentes (FACI), Es. Redes de Computadores (UFPA)" }
 ]
 
 const optionalSubjects = [
   "Disciplinas Optativas (160h total)",
-  "Educação Sócio Ambiental (80h)",
-  "Linguagem Brasileira de Sinais (80h)",
+  "Educação Socioambiental (80h)",
+  "Língua Brasileira de Sinais (80h)",
   "Direitos Humanos e dos Povos Tradicionais (80h)",
   "Acessibilidade e Inclusão Digital (80h)",
   "Tecnologia em Contexto Social (80h)",
@@ -192,10 +192,12 @@ export const AboutCourseSection = () => {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-caesoft-light mb-4">Perfil Profissional</h3>
                 <p className="text-light-dimmed leading-relaxed text-lg mb-4">
-                  O perfil profissional desejado perpassa pelo desenvolvimento de atividades com pensamento crítico e sensível aos efeitos que a tecnologia pode desencadear no ser humano, para alcançar o desenvolvimento da tecnologia em uma sociedade.
+                  O curso é indicado para todo interessado no desenvolvimento de atividades com implementações tecnológicas na área da Computação.
+                  <br></br>
+                   O interessado deve ter pensamento crítico e sensível aos efeitos que a tecnologia possa desencadear no ser humano e intenção de alcançar o desenvolvimento da tecnologia na sua sociedade.
                 </p>
                 <p className="text-light-dimmed leading-relaxed text-lg">
-                  Assim, como uma formação sólida para atuar na pesquisa na área da engenharia de software, que é a área da computação.
+                  Assim, o graduado obtém uma formação sólida para atuar na pesquisa e no desenvolvimento na área de Engenharia de Software e noutras áreas relacionadas à Computação.
                 </p>
               </CardContent>
             </Card>
@@ -208,13 +210,13 @@ export const AboutCourseSection = () => {
                 <h3 className="text-2xl font-bold text-caesoft-light mb-4">Requisitos e Formas de Acesso</h3>
                 <div className="space-y-4">
                   <p className="text-light-dimmed leading-relaxed">
-                    A forma de acesso se dá por meio do <strong className="text-caesoft-green">Exame Nacional do Ensino Médio – ENEM</strong>, conforme o ingresso nos Cursos de Graduação da Instituição.
+                    O acesso se dá por meio do vestibular próprio da Universidade do Estado do Pará, geralmente com a nota do <strong className="text-caesoft-green">Exame Nacional do Ensino Médio (ENEM)</strong>, conforme o ingresso nos Cursos de Graduação da Instituição.
                   </p>
                   <p className="text-light-dimmed leading-relaxed">
-                    Os critérios de seleção e distribuição de vagas são definidos por Edital elaborado pela Pró-Reitoria de Graduação – PROGRAD. O planejamento, a coordenação e avaliação dos Processos de ingresso/acesso são de competência da Comissão Permanente de Acesso ao Ensino Superior – COPAES.
+                    Os critérios de seleção e distribuição de vagas são definidos por edital elaborado pela Pró-Reitoria de Graduação – PROGRAD. O planejamento, a coordenação e avaliação dos Processos de ingresso/acesso são de competência da Comissão Permanente de Acesso ao Ensino Superior – COPAES.
                   </p>
                   <p className="text-light-dimmed leading-relaxed">
-                    O curso é um <strong className="text-caesoft-purple">curso regular</strong>, acessível aos candidatos que concluíram o Ensino Médio ou equivalente e tenham sido classificados em processo seletivo.
+                    O bacharelado é um <strong className="text-caesoft-purple">curso regular</strong>, acessível aos candidatos que concluíram o Ensino Médio ou equivalente e que tenham sido classificados em processo seletivo.
                   </p>
                 </div>
               </CardContent>
