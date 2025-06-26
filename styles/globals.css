@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Quanta Grotesk';
   src: url('/quanta-grotesk/QuantaGroteskPro-Bold-BF6459a54d79343.ttf') format('truetype'),
@@ -66,31 +67,6 @@
     @apply bg-background text-foreground font-fluent;
     overflow-x: hidden;
     background: linear-gradient(135deg, #0C091F 0%, #0F0B26 25%, #140F2D 50%, #0C091F 75%, #080518 100%) fixed;
-  }
-  
-  /* Otimizações para mobile */
-  @media (max-width: 768px) {
-    body {
-      /* Melhor performance de scroll em mobile */
-      -webkit-overflow-scrolling: touch;
-      /* Background fixo pode causar problemas em mobile, usar attachment local */
-      background-attachment: local;
-    }
-    
-    /* Reduzir efeitos de blur em mobile para melhor performance */
-    .glass-effect,
-    .glass-effect-light,
-    .glass-effect-accent {
-      backdrop-filter: blur(10px) saturate(150%);
-    }
-    
-    /* Otimizar animações em mobile */
-    .animate-pulse-glow,
-    .animate-shimmer,
-    .animate-float,
-    .animate-nav-highlight {
-      animation-duration: 4s;
-    }
   }
 }
 

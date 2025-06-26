@@ -17,10 +17,14 @@ export function Section({ id, children, className = "" }: SectionProps) {
   const isMobile = useIsMobile()
 
   useEffect(() => {
-    // More aggressive settings for mobile to ensure better visibility detection
+    // Much more aggressive settings for mobile, especially for content-heavy sections
+    const isContentHeavySection = id === 'course' || id === 'about-caesoft' || id === 'resources'
+    
     const observerOptions = {
-      threshold: isMobile ? 0.05 : 0.1, // Lower threshold for mobile
-      rootMargin: isMobile ? "50px 0px -20px 0px" : "20px 0px -10px 0px", // Start animation earlier on mobile
+      threshold: isMobile ? (isContentHeavySection ? 0.01 : 0.03) : 0.1, // Very low threshold for mobile content-heavy sections
+      rootMargin: isMobile ? 
+        (isContentHeavySection ? "100px 0px -50px 0px" : "80px 0px -30px 0px") : 
+        "20px 0px -10px 0px", // Start animation much earlier on mobile
     }
 
     const observer = new IntersectionObserver(
@@ -39,27 +43,11 @@ export function Section({ id, children, className = "" }: SectionProps) {
     return () => observer.disconnect()
   }, [isMobile])
 
-  // Special handling for content-heavy sections like course section
-  const isContentHeavySection = id === 'course' || id === 'campus' || id === 'resources'
-  const getMinHeight = () => {
-    if (isMobile) {
-      return isContentHeavySection ? 'min-h-[50vh]' : 'min-h-[70vh]'
-    }
-    return 'min-h-screen'
-  }
-
-  const getPadding = () => {
-    if (isMobile) {
-      return isContentHeavySection ? 'py-8' : 'py-12'
-    }
-    return 'py-20'
-  }
-
   return (
     <section
       id={id}
       ref={sectionRef}
-      className={`${getMinHeight()} flex items-center justify-center ${getPadding()} transition-all duration-1000 ${
+      className={`${isMobile ? 'min-h-[60vh]' : 'min-h-screen'} flex items-center justify-center ${isMobile ? 'py-10' : 'py-20'} transition-all duration-1000 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       } ${className}`}
     >
