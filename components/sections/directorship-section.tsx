@@ -18,49 +18,41 @@ interface DirectorMember {
 const directors: DirectorMember[] = [
   {
     id: 1,
-    name: "João Silva",
-    position: "Presidente",
-    description: "Estudante do 6º período, apaixonado por desenvolvimento web e liderança estudantil. Atua na coordenação geral das atividades do centro acadêmico.",
+    name: "Ryan Souza",
+    position: "Fundador e Presidente",
+    description: "Fundador do CAESoft e líder estudantil, responsável pela visão estratégica e coordenação geral das atividades do centro acadêmico.",
     photo: "/placeholder-avatar.svg",
     linkedinUrl: "#"
   },
   {
     id: 2,
-    name: "Maria Santos",
-    position: "Vice-Presidente",
-    description: "Estudante do 5º período, especialista em gestão de projetos e eventos acadêmicos. Responsável por apoiar a presidência e coordenar eventos.",
+    name: "Jorge Hermes",
+    position: "Desenvolvedor e Acelerador",
+    description: "Especialista em desenvolvimento de projetos e tecnologia, responsável pela aceleração de iniciativas tecnológicas e desenvolvimento de soluções.",
     photo: "/placeholder-avatar.svg",
     linkedinUrl: "#"
   },
   {
     id: 3,
-    name: "Pedro Costa",
-    position: "Secretário",
-    description: "Estudante do 4º período, responsável pela documentação e comunicação interna. Gerencia as atas e documentos oficiais do CAESoft.",
+    name: "Isabelle Campos",
+    position: "Copresidente",
+    description: "Atua no apoio à presidência e na coordenação de projetos estratégicos, auxiliando na gestão administrativa e acadêmica do centro.",
     photo: "/placeholder-avatar.svg",
     linkedinUrl: "#"
   },
   {
     id: 4,
-    name: "Ana Lima",
-    position: "Tesoureira",
-    description: "Estudante do 7º período, responsável pela gestão financeira do centro acadêmico. Controla orçamentos e recursos financeiros.",
+    name: "Thaylan Fonseca",
+    position: "Organizador de Eventos",
+    description: "Responsável pela organização e coordenação de eventos, workshops, palestras e atividades acadêmicas do CAESoft.",
     photo: "/placeholder-avatar.svg",
     linkedinUrl: "#"
   },
   {
     id: 5,
-    name: "Carlos Oliveira",
-    position: "Diretor de Eventos",
-    description: "Estudante do 6º período, especialista em organização de eventos tecnológicos. Coordena workshops, palestras e competições.",
-    photo: "/placeholder-avatar.svg",
-    linkedinUrl: "#"
-  },
-  {
-    id: 6,
-    name: "Luana Ferreira",
-    position: "Diretora de Marketing",
-    description: "Estudante do 5º período, responsável pela comunicação visual e marketing digital do CAESoft. Gerencia redes sociais e campanhas.",
+    name: "Jonathan Nascimento",
+    position: "Tesoureiro",
+    description: "Responsável pela gestão financeira do centro acadêmico, controlando orçamentos, recursos e planejamento financeiro.",
     photo: "/placeholder-avatar.svg",
     linkedinUrl: "#"
   }

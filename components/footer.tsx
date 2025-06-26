@@ -29,7 +29,7 @@ export function Footer() {
   const contactInfo = [
     { icon: Mail, text: "caesoft@aluno.uepa.br", href: "mailto:caesoft@aluno.uepa.br" },
     { icon: Phone, text: "+55 (91) 98363-8964", href: "tel:+5591983638964" },
-    { icon: MapPin, text: "UEPA - Campus I, Belém/PA", href: "#campus" },
+    { icon: MapPin, text: "UEPA - Campus XXII, Ananindeua/PA", href: "#campus" },
   ]
 
   return (

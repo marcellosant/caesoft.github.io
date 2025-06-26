@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'Programação',
     'Software',
     'Pará',
-    'Belém',
+    'Ananindeua',
     'Estudantes',
     'Academia',
     'Computação'
@@ -129,7 +129,7 @@ export default function RootLayout({
               "foundingDate": "2024",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Belém",
+                "addressLocality": "Ananindeua",
                 "addressRegion": "PA",
                 "addressCountry": "BR"
               },

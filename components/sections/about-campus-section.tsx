@@ -44,8 +44,8 @@ export const AboutCampusSection = () => {
                     <h3 className="text-xl font-semibold text-caesoft-light">Infraestrutura Moderna</h3>
                   </div>
                   <p className="text-light-dimmed leading-relaxed">
-                    Prédio novo inaugurado em 2024 com salas de aula equipadas, laboratórios avançados e 
-                    infraestrutura moderna para Engenharia de Software, Engenharia Florestal e Licenciatura em Matemática.
+                    Campus moderno com salas de aula equipadas, laboratórios avançados e 
+                    infraestrutura de qualidade para os cursos de Engenharia de Software, Engenharia Florestal, Licenciatura em Matemática e Bacharelado em Biomedicina.
                   </p>
                 </CardContent>
               </Card>
@@ -70,8 +70,8 @@ export const AboutCampusSection = () => {
                     <h3 className="text-xl font-semibold text-caesoft-light">Laboratórios Especializados</h3>
                   </div>
                   <p className="text-light-dimmed leading-relaxed">
-                    Dois laboratórios modernos equipados com tecnologia de ponta para apoiar os cursos de 
-                    engenharia e matemática, proporcionando experiência prática aos estudantes.
+                    Laboratórios modernos equipados com tecnologia de ponta para apoiar os cursos oferecidos, 
+                    proporcionando experiência prática aos estudantes.
                   </p>
                 </CardContent>
               </Card>
@@ -82,12 +82,28 @@ export const AboutCampusSection = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <MapPin className="text-caesoft-blue mr-3" size={24} />
-                    <h3 className="text-xl font-semibold text-caesoft-light">Endereço do Campus</h3>
+                    <h3 className="text-xl font-semibold text-caesoft-light">Contato do Campus</h3>
                   </div>
-                  <div className="space-y-2 text-light-dimmed">
+                  <div className="space-y-3 text-light-dimmed">
+                    <div>
+                      <p className="text-caesoft-light font-semibold mb-1">Coordenadora Geral:</p>
+                      <p className="text-sm">Camila Claíde Souza do Vale</p>
+                    </div>
+                    <div>
+                      <p className="text-caesoft-light font-semibold mb-1">Coordenador Administrativo:</p>
+                      <p className="text-sm">Fábio Barros Neves</p>
+                    </div>
+                    <p className="flex items-center">
+                      <span className="font-medium mr-2">📞</span>
+                      (91) 98521-3114
+                    </p>
+                    <p className="flex items-center">
+                      <span className="font-medium mr-2">📧</span>
+                      campusananindeua@uepa.br
+                    </p>
                     <p className="flex items-center">
                       <span className="font-medium mr-2">📍</span>
-                      Avenida Independência, s/n
+                      Avenida Independência, S/N
                     </p>
                     <p className="flex items-center">
                       <span className="font-medium mr-2">🏢</span>
@@ -97,25 +113,17 @@ export const AboutCampusSection = () => {
                       <span className="font-medium mr-2">🏙️</span>
                       Ananindeua - PA
                     </p>
-                    <p className="flex items-center">
-                      <span className="font-medium mr-2">📞</span>
-                      (91) 3299-2200
-                    </p>
                   </div>
                 </CardContent>
               </Card>
 
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 glass-effect rounded-lg">
                   <div className="text-2xl font-bold text-caesoft-purple">2</div>
                   <div className="text-sm text-light-dimmed">Laboratórios</div>
                 </div>
                 <div className="text-center p-4 glass-effect rounded-lg">
-                  <div className="text-2xl font-bold text-caesoft-green">5</div>
-                  <div className="text-sm text-light-dimmed">Salas de Aula</div>
-                </div>
-                <div className="text-center p-4 glass-effect rounded-lg">
-                  <div className="text-2xl font-bold text-caesoft-blue">3</div>
+                  <div className="text-2xl font-bold text-caesoft-green">4</div>
                   <div className="text-sm text-light-dimmed">Cursos</div>
                 </div>
               </div>
@@ -159,7 +167,7 @@ export const AboutCampusSection = () => {
             <h3 className="text-3xl font-bold text-caesoft-light mb-8">
               Cursos do <span className="text-gradient">Campus XXII</span>
             </h3>
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               <Card className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl">
                 <CardContent className="p-6 text-center">
                   <Laptop className="text-caesoft-purple mx-auto mb-4" size={48} />
@@ -181,6 +189,14 @@ export const AboutCampusSection = () => {
                   <BookOpen className="text-caesoft-blue mx-auto mb-4" size={48} />
                   <h4 className="text-lg font-semibold text-caesoft-light mb-2">Licenciatura em Matemática</h4>
                   <p className="text-light-dimmed text-sm">Licenciatura</p>
+                </CardContent>
+              </Card>
+
+              <Card className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl">
+                <CardContent className="p-6 text-center">
+                  <Users className="text-caesoft-gold mx-auto mb-4" size={48} />
+                  <h4 className="text-lg font-semibold text-caesoft-light mb-2">Biomedicina</h4>
+                  <p className="text-light-dimmed text-sm">Bacharelado - Modular (Forma Pará)</p>
                 </CardContent>
               </Card>
             </div>

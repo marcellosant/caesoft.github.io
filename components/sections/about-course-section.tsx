@@ -10,30 +10,31 @@ const disciplinesBySemester = [
   {
     semester: "1º Semestre",
     subjects: [
-      "Fundamentos de Matemática (80h)",
-      "Introdução à Engenharia de Software (80h)",
-      "Algoritmos e Programação I (80h)",
-      "Inglês Instrumental (80h)",
-      "Leitura e Produção de Textos (80h)"
+      "Matemática Discreta (80h)",
+      "Fundamentos de Sistemas de Informação (60h)",
+      "Fundamentos de Sistemas Operacionais (60h)",
+      "Linguagens Formais (80h)",
+      "Programação Estruturada (80h)",
+      "Inglês Instrumental (40h)"
     ]
   },
   {
     semester: "2º Semestre", 
     subjects: [
-      "Cálculo I (80h)",
-      "Algoritmos e Programação II (80h)",
-      "Laboratório de Programação (60h)",
-      "Fundamentos de Física (80h)",
-      "Metodologia Científica (60h)"
+      "Estatística Aplicada a Informática (60h)",
+      "Análise Orientada à Objetos (80h)",
+      "Modelagem de Dados (60h)",
+      "Estrutura de Dados, Pesquisa e Ordenação (80h)",
+      "Programação Web (80h)"
     ]
   },
   {
     semester: "3º Semestre",
     subjects: [
-      "Cálculo II (80h)",
+      "Fundamentos de Engenharia de Software (60h)",
       "Programação Orientada a Objetos I (80h)",
-      "Estrutura de Dados (80h)",
       "Banco de Dados I (80h)",
+      "Análise e Projeto de Algoritmos (80h)",
       "Microcontroladores e Microprocessadores (80h)",
       "Inovação Tecnológica e Empreendedorismo (60h)"
     ]
@@ -99,7 +100,11 @@ const professors = [
   { name: "Carlos Benedito Barreiros Gutierrez", title: "Mestre", specialization: "Ciências Ambientais" },
   { name: "Gleisson Amaral Mendes", title: "Mestre", specialization: "Engenharia Industrial" },
   { name: "Ítalo Flexa Di Paolo", title: "Mestre", specialization: "Engenharia Elétrica" },
-  { name: "Jairo Fadul de Lima", title: "Mestre", specialization: "Engenharia de Processos" }
+  { name: "Jairo Fadul de Lima", title: "Mestre", specialization: "Engenharia de Processos" },
+  { name: "Paulo Sérgio Rodrigues Lima", title: "Doutor", specialization: "Engenharia Elétrica com ênfase em Computação Aplicada" },
+  { name: "Renato Ferreira Carr", title: "Mestre", specialization: "Educação e Ciências da Computação" },
+  { name: "Thiago Nicolau Magalhães de Souza Conte", title: "Mestre", specialization: "Engenharia Elétrica - Inteligência Computacional" },
+  { name: "Wanderson Alexandre da Silva Quinto", title: "Mestre", specialization: "Engenharia Elétrica" }
 ]
 
 const optionalSubjects = [
@@ -122,7 +127,7 @@ export const AboutCourseSection = () => {
               Bacharelado em <span className="text-gradient">Engenharia de Software</span>
             </h2>
             <p className="text-xl text-light-dimmed max-w-3xl mx-auto">
-              Formação voltada para o desenvolvimento do raciocínio lógico e conhecimentos científicos e tecnológicos
+              O Bacharel em Engenharia de Software contará com uma formação voltada para o desenvolvimento do raciocínio lógico e conhecimentos matemáticos, científicos, tecnológicos e instrumentais computacionais que estimulam sua atuação crítica e criativa na identificação e resolução de problemas voltados aos diversos setores da sociedade.
             </p>
           </div>
 
@@ -140,9 +145,9 @@ export const AboutCourseSection = () => {
             <Card className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl">
               <CardContent className="p-6 text-center">
                 <Users className="text-caesoft-green mx-auto mb-4" size={48} />
-                <h3 className="text-xl font-semibold text-caesoft-light mb-3">3 Campi</h3>
+                <h3 className="text-xl font-semibold text-caesoft-light mb-3">4 Campi</h3>
                 <p className="text-light-dimmed">
-                  Turmas em Castanhal, Redenção e Baião (Forma Pará).
+                  Turmas em Ananindeua (Campus XXII), Castanhal, Redenção e Parauapebas.
                 </p>
               </CardContent>
             </Card>
@@ -154,6 +159,53 @@ export const AboutCourseSection = () => {
                 <p className="text-light-dimmed">
                   Curso reconhecido pelo MEC com formação sólida para pesquisa e desenvolvimento.
                 </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Course Objective */}
+          <div className="mb-12">
+            <Card className="glass-effect-light border-purple-soft">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-caesoft-light mb-4">Objetivo Geral</h3>
+                <p className="text-light-dimmed leading-relaxed text-lg">
+                  Formar profissionais da área de Computação e Informática para atuação em pesquisa, gestão, desenvolvimento, uso e avaliação de tecnologias de informação aplicadas nas organizações com uma formação alicerçada nos pilares, tecnológicos, organizacionais e humanísticos.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Professional Profile */}
+          <div className="mb-12">
+            <Card className="glass-effect-light border-purple-soft">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-caesoft-light mb-4">Perfil Profissional</h3>
+                <p className="text-light-dimmed leading-relaxed text-lg mb-4">
+                  O perfil profissional desejado perpassa pelo desenvolvimento de atividades com pensamento crítico e sensível aos efeitos que a tecnologia pode desencadear no ser humano, para alcançar o desenvolvimento da tecnologia em uma sociedade.
+                </p>
+                <p className="text-light-dimmed leading-relaxed text-lg">
+                  Assim, como uma formação sólida para atuar na pesquisa na área da engenharia de software, que é a área da computação.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Access Requirements */}
+          <div className="mb-12">
+            <Card className="glass-effect-light border-purple-soft">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-caesoft-light mb-4">Requisitos e Formas de Acesso</h3>
+                <div className="space-y-4">
+                  <p className="text-light-dimmed leading-relaxed">
+                    A forma de acesso se dá por meio do <strong className="text-caesoft-green">Exame Nacional do Ensino Médio – ENEM</strong>, conforme o ingresso nos Cursos de Graduação da Instituição.
+                  </p>
+                  <p className="text-light-dimmed leading-relaxed">
+                    Os critérios de seleção e distribuição de vagas são definidos por Edital elaborado pela Pró-Reitoria de Graduação – PROGRAD. O planejamento, a coordenação e avaliação dos Processos de ingresso/acesso são de competência da Comissão Permanente de Acesso ao Ensino Superior – COPAES.
+                  </p>
+                  <p className="text-light-dimmed leading-relaxed">
+                    O curso é um <strong className="text-caesoft-purple">curso regular</strong>, acessível aos candidatos que concluíram o Ensino Médio ou equivalente e tenham sido classificados em processo seletivo.
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -172,6 +224,9 @@ export const AboutCourseSection = () => {
               </Badge>
               <Badge variant="outline" className="!bg-caesoft-purple/80 hover:!brightness-110 !text-white !border-caesoft-purple/80 px-4 py-2 transition-all duration-200">
                 192h Estágio
+              </Badge>
+              <Badge variant="outline" className="!bg-caesoft-green/80 hover:!brightness-110 !text-white !border-caesoft-green/80 px-4 py-2 transition-all duration-200">
+                80h TCC
               </Badge>
             </div>
           </div>
