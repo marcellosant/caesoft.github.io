@@ -95,16 +95,90 @@ const disciplinesBySemester = [
 ]
 
 const professors = [
-  { name: "Anderson Jorge Serra da Costa", title: "Mestre", specialization: "Ciência da Computação (UFPA)" },
-  { name: "Antônio Marcos Cardoso Silva", title: "Mestre", specialization: "Informática (UFPR)" },
-  { name: "Carlos Benedito Barreiros Gutierrez", title: "Doutor e Mestre", specialization: "Dr., Me. Ciências Ambientais (UFPA)" },
-  { name: "Gleisson Amaral Mendes", title: "Mestre e Especialista", specialization: "Me. Engenharia Industrial (UFPA), Es. Redes de Computadores (Unama)" },
-  { name: "Ítalo Flexa Di Paolo", title: "Doutor e Mestre", specialization: "Dr. Engenharia Elétrica: Computação Aplicada (UFPA), Me. Engenharia Elétrica: Sistemas de Energia Elétrica (UFPA)" },
-  { name: "Jairo Fadul de Lima", title: "Mestre e Especialista", specialization: "Me. Engenharia de Processos (UFPA), Es. Análise de Sistemas (UFPA)" },
-  { name: "Paulo Sérgio Rodrigues Lima", title: "Doutor, Mestre e Especialista", specialization: "Dr. Engenharia Elétrica com ênfase em Computação Aplicada (UFPA), Me. Ciências da Computação (UFRGS), Es. Analytics e Business Intelligence (PUC-MG)" },
-  { name: "Renato Ferreira Carr", title: "Mestre e Especialista", specialization: "Me. Ciencias de la Computación (Universidad de la Habana), Me. Educação (Unesa), Es. Direito Educacional (FUI), Es. Engenharia de Segurança do Trabalho (PUC-GO), Es. Telecomunicações (Unesa), Es. Análise de Sistemas (Unesa)" },
-  { name: "Thiago Nicolau Magalhães de Souza Conte", title: "Doutor, Mestre e Especialista", specialization: "Dr. Engenharia Elétrica - Inteligência Computacional (UFPA), Me. Engenharia Elétrica (UFPA), Es. Docência para a Educação Profissional (SENAC), Es. Desenvolvimento de Sistemas Baseado em Software Livre (Unama)" },
-  { name: "Wanderson Alexandre da Silva Quinto", title: "Doutor, Mestre e Especialista", specialization: "Dr. Psicologia (UFPA), Me. Engenharia Elétrica (UFPA), Es. Habilidades e Competências Docentes (FACI), Es. Redes de Computadores (UFPA)" }
+  { 
+    name: "Anderson Jorge Serra da Costa", 
+    title: "Mestre", 
+    specialization: "Ciência da Computação (UFPA)", 
+    lattes: "http://lattes.cnpq.br/7707885586024191" 
+  },
+  { 
+    name: "Antônio Marcos Cardoso Silva", 
+    title: "Mestre", 
+    specialization: "Informática (UFPR)", 
+    lattes: "https://lattes.cnpq.br/3949852619017976" 
+  },
+  { 
+    name: "Carlos Benedito Barreiros Gutierrez", 
+    title: "Doutor e Mestre", 
+    specialization: "Dr., Me. Ciências Ambientais (UFPA)", 
+    lattes: "https://lattes.cnpq.br/0920214717536195"  
+  },
+  { 
+    name: "Gleisson Amaral Mendes", 
+    title: "Mestre e Especialista", 
+    specialization: "Me. Engenharia Industrial (UFPA), Es. Redes de Computadores (Unama)", 
+    lattes: "https://lattes.cnpq.br/7781175809341535"  
+  },
+  { 
+    name: "Ítalo Flexa Di Paolo", 
+    title: "Doutor e Mestre", 
+    specialization: "Dr. Engenharia Elétrica: Computação Aplicada (UFPA), Me. Engenharia Elétrica: Sistemas de Energia Elétrica (UFPA)", 
+    lattes: "https://lattes.cnpq.br/7195767161641034"  
+  },
+  { 
+    name: "Jairo Fadul de Lima", 
+    title: "Mestre e Especialista", 
+    specialization: "Me. Engenharia de Processos (UFPA), Es. Análise de Sistemas (UFPA)", 
+    lattes: "https://lattes.cnpq.br/5482391365956398"  
+  },
+  { 
+    name: "Paulo Sérgio Rodrigues Lima", 
+    title: "Doutor, Mestre e Especialista", 
+    specialization: "Dr. Engenharia Elétrica com ênfase em Computação Aplicada (UFPA), Me. Ciências da Computação (UFRGS), Es. Analytics e Business Intelligence (PUC-MG)", 
+    lattes: "https://lattes.cnpq.br/2188563656904692"  
+  },
+  { 
+    name: "Renato Ferreira Carr", 
+    title: "Mestre e Especialista", 
+    specialization: "Me. Ciencias de la Computación (Universidad de la Habana), Me. Educação (Unesa), Es. Direito Educacional (FUI), Es. Engenharia de Segurança do Trabalho (PUC-GO), Es. Telecomunicações (Unesa), Es. Análise de Sistemas (Unesa)", 
+    lattes: ""  
+  },
+  { 
+    name: "Thiago Nicolau Magalhães de Souza Conte", 
+    title: "Doutor, Mestre e Especialista", 
+    specialization: "Dr. Engenharia Elétrica - Inteligência Computacional (UFPA), Me. Engenharia Elétrica (UFPA), Es. Docência para a Educação Profissional (SENAC), Es. Desenvolvimento de Sistemas Baseado em Software Livre (Unama)", 
+    lattes: "https://lattes.cnpq.br/0783374325529116"  
+  },
+  { 
+    name: "Wanderson Alexandre da Silva Quinto", 
+    title: "Doutor, Mestre e Especialista", 
+    specialization: "Dr. Psicologia (UFPA), Me. Engenharia Elétrica (UFPA), Es. Habilidades e Competências Docentes (FACI), Es. Redes de Computadores (UFPA)", 
+    lattes: "https://lattes.cnpq.br/4429230658129917"
+  },
+  { 
+    name: "Marta de Oliveira Barreiros", 
+    title: "Doutora", 
+    specialization: "Sistemas de Informação (Facimp), Me. Biotecnologia (UFPA) e Dr. Engenharia Elétrica (UFMA).", 
+    lattes: "https://lattes.cnpq.br/2695239794047991"
+  },
+  { 
+    name: "Leno Rodrigues Martins", 
+    title: "Doutor", 
+    specialization: "Engenharia da Computação (2013), mestre (2016) e doutor (2020) em Engenharia Elétrica, todos pela UFPA.", 
+    lattes: "https://lattes.cnpq.br/0564896752552040"
+  },
+  { 
+    name: "Armando Jose de Sá Santos", 
+    title: "Mestre", 
+    specialization: "Análise de Sistemas - Universidade Estácio de Sá (2009). Mestre em Ciência e Engenharia de Materiais pela Universidade Federal de São Carlos - UFSCar (2024)", 
+    lattes: "https://lattes.cnpq.br/6286321140581380"
+  },
+  { 
+    name: "Claudio Maciel de Souza Coutinho", 
+    title: "Mestre", 
+    specialization: "Mestrado em Engenharia Elétrica - UFPA (2015), Bacharelado em Engenharia da Computação - UFPA (2012).", 
+    lattes: "https://lattes.cnpq.br/2859593183875050"
+  }
 ]
 
 const optionalSubjects = [
@@ -303,6 +377,11 @@ export const AboutCourseSection = () => {
                     <h4 className="text-caesoft-light font-semibold">{prof.name}</h4>
                     <p className="text-caesoft-green text-sm">{prof.title}</p>
                     <p className="text-light-dimmed text-xs">{prof.specialization}</p>
+                    <div className="mt-2 self-end">
+                      <a href={prof.lattes} target="_blank" rel="noopener noreferrer">
+                        <img src="/lattes-icon2.png" alt="Lattes" className="w-4 h-4" />
+                      </a>
+                   </div>
                   </div>
                 ))}
               </div>
