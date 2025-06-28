@@ -43,11 +43,21 @@ export function Section({ id, children, className = "" }: SectionProps) {
     return () => observer.disconnect()
   }, [isMobile])
 
+  const getMinHeight = () => {
+    if (!isMobile) return 'min-h-screen'
+    
+    // Hero section needs full height on mobile
+    if (id === 'home') return 'min-h-screen'
+    
+    // Other sections can use smaller height on mobile
+    return 'min-h-[60vh]'
+  }
+
   return (
     <section
       id={id}
       ref={sectionRef}
-      className={`${isMobile ? 'min-h-[60vh]' : 'min-h-screen'} flex items-center justify-center ${isMobile ? 'py-10' : 'py-20'} transition-all duration-1000 ${
+      className={`${getMinHeight()} flex items-center justify-center ${isMobile ? 'py-10' : 'py-20'} transition-all duration-1000 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       } ${className}`}
     >
