@@ -9,6 +9,8 @@
 
 # production
 /build
+docs/
+.next/
 /docs
 /.next
 
