@@ -35,7 +35,7 @@ const directors: DirectorMember[] = [
     position: "Desenvolvedor e Acelerador",
     description: "Especialista em desenvolvimento de projetos e tecnologia, responsável pela aceleração de iniciativas tecnológicas e desenvolvimento de soluções.",
     photo: "jorgehermes.jpg",
-    linkedinUrl: "#"
+    linkedinUrl: "https://www.linkedin.com/in/jhermesn/"
   },
   {
     id: 3,
