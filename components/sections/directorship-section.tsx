@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide,  } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules';
+import { useRef, useCallback } from 'react';
 
 interface DirectorMember {
   id: number
@@ -135,6 +136,26 @@ const directors: DirectorMember[] = [
 ]
 
 export const DirectorshipSection = () => {
+  const swiperRef = useRef<any>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleUserInteraction = useCallback(() => {
+    if (swiperRef.current && swiperRef.current.autoplay) {
+
+      swiperRef.current.autoplay.stop();
+      
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+      
+      timeoutRef.current = setTimeout(() => {
+        if (swiperRef.current && swiperRef.current.autoplay) {
+          swiperRef.current.autoplay.start();
+        }
+      }, 1000);
+    }
+  }, []);
+
   return (
     <Section id="directorship" className="bg-navy-lighter/30">
       <div className="container mx-auto px-4">
@@ -153,71 +174,87 @@ export const DirectorshipSection = () => {
 
           {/* Carrossel de cards */}
           <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={24}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 2000, 
-            disableOnInteraction: false, 
-          }}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          >
-            {directors.map((director) => (
-              <SwiperSlide key={director.id}>
-                <Card className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 min-h-[450px]">
-                  <CardContent className="p-6 text-center  h-full">
-                    {/* Foto circular */}
-                    <div className="relative w-32 h-32 mx-auto mb-4">
-                      <div className="w-full h-full rounded-full bg-gradient-to-br from-caesoft-purple to-caesoft-green p-1">
-                        <div className="w-full h-full rounded-full bg-navy-dark overflow-hidden">
-                          <Image
-                            src={director.photo}
-                            alt={director.name}
-                            width={128}
-                            height={128}
-                            className="w-full h-full object-cover"
-                          />
+            ref={swiperRef}
+            modules={[Pagination, Autoplay]}
+            spaceBetween={24}
+            slidesPerView={1}
+            loop={true}
+            grabCursor={true}
+            touchRatio={1}
+            touchAngle={45}
+            simulateTouch={true}
+            allowTouchMove={true}
+            pagination={{ 
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            autoplay={{
+              delay: 2000, 
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+              waitForTransition: true,
+            }}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="pb-12"
+            onTouchStart={handleUserInteraction}
+            onSliderMove={handleUserInteraction}
+            onTransitionStart={handleUserInteraction}
+            >
+              {directors.map((director) => (
+                <SwiperSlide key={director.id} className="py-4">
+                  <Card className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 min-h-[450px]">
+                    <CardContent className="p-6 text-center  h-full">
+                      {/* Foto circular */}
+                      <div className="relative w-32 h-32 mx-auto mb-4">
+                        <div className="w-full h-full rounded-full bg-gradient-to-br from-caesoft-purple to-caesoft-green p-1">
+                          <div className="w-full h-full rounded-full bg-navy-dark overflow-hidden">
+                            <Image
+                              src={director.photo}
+                              alt={director.name}
+                              width={128}
+                              height={128}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Nome */}
-                    <h3 className="text-xl font-bold text-caesoft-light mb-2">
-                      {director.name}
-                    </h3>
+                      {/* Nome */}
+                      <h3 className="text-xl font-bold text-caesoft-light mb-2">
+                        {director.name}
+                      </h3>
 
-                    {/* Cargo */}
-                    <Badge
-                      variant="secondary"
-                      className="bg-caesoft-purple/20 text-caesoft-purple border border-purple-soft mb-4"
-                    >
-                      {director.position}
-                    </Badge>
+                      {/* Cargo */}
+                      <Badge
+                        variant="secondary"
+                        className="bg-caesoft-purple/20 text-caesoft-purple border border-purple-soft mb-4"
+                      >
+                        {director.position}
+                      </Badge>
 
-                    {/* Descrição */}
-                    <p className="text-light-dimmed text-sm leading-relaxed mb-6">
-                      {director.description}
-                    </p>
+                      {/* Descrição */}
+                      <p className="text-light-dimmed text-sm leading-relaxed mb-6">
+                        {director.description}
+                      </p>
 
-                    {/* Link LinkedIn */}
-                    <a
-                      href={director.linkedinUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-caesoft-purple to-caesoft-green text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
-                    >
-                      <Linkedin size={16} />
-                      <span className="text-sm font-medium">LinkedIn</span>
-                    </a>
-                  </CardContent>
-                </Card>
-              </SwiperSlide>
-            ))}
+                      {/* Link LinkedIn */}
+                      <a
+                        href={director.linkedinUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-caesoft-purple to-caesoft-green text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
+                      >
+                        <Linkedin size={16} />
+                        <span className="text-sm font-medium">LinkedIn</span>
+                      </a>
+                    </CardContent>
+                  </Card>
+                </SwiperSlide>
+              ))}
           </Swiper>
 
           {/* Estatística adicional */}

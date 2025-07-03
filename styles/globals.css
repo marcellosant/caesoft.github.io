@@ -426,3 +426,28 @@ h1, h2, h3, h4, h5, h6 {
 .bg-section-dark {
   background-color: rgba(8, 5, 24, 0.8);
 }
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 2rem !important;
+  bottom: auto !important;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(89, 62, 255, 0.4) !important;
+  opacity: 1 !important;
+  width: 12px !important;
+  height: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: linear-gradient(135deg, #593EFF 0%, #0DEF7C 100%) !important;
+  transform: scale(1.2) !important;
+  box-shadow: 0 0 10px rgba(89, 62, 255, 0.5) !important;
+}
+
+.swiper-pagination-bullet:hover {
+  background: rgba(89, 62, 255, 0.7) !important;
+  transform: scale(1.1) !important;
+}
