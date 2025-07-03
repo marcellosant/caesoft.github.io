@@ -5,6 +5,10 @@ import { Badge } from "@/components/ui/badge"
 import { Section } from "@/components/section"
 import { Linkedin, Users, Award } from "lucide-react"
 import Image from "next/image"
+import { Swiper, SwiperSlide,  } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination, Autoplay } from 'swiper/modules';
 
 interface DirectorMember {
   id: number
@@ -55,6 +59,78 @@ const directors: DirectorMember[] = [
     description: "Responsável pela gestão financeira do centro acadêmico, controlando orçamentos, recursos e planejamento financeiro.",
     photo: "/placeholder-avatar.svg",
     linkedinUrl: "#"
+  },
+  {
+    "id": 6,
+    "name": "Caio Amaral",
+    "position": "Ajudante",
+    "description": "Responsável por apoiar nas atividades operacionais e administrativas do CAESoft.",
+    "photo": "/placeholder-avatar.svg",
+    "linkedinUrl": "#"
+  },
+  {
+    "id": 7,
+    "name": "Claudio Henrique",
+    "position": "Designer",
+    "description": "Responsável pela criação de identidade visual, design gráfico e material de comunicação do CAESoft.",
+    "photo": "/placeholder-avatar.svg",
+    "linkedinUrl": "#"
+  },
+  {
+    "id": 8,
+    "name": "Guilherme",
+    "position": "Ajudante",
+    "description": "Auxilia nas diversas atividades do centro acadêmico, prestando apoio nas demandas diárias.",
+    "photo": "/placeholder-avatar.svg",
+    "linkedinUrl": "#"
+  },
+  {
+    "id": 9,
+    "name": "Iam Melo",
+    "position": "Social Media",
+    "description": "Responsável pela comunicação digital, gestão das redes sociais e criação de conteúdo online do CAESoft.",
+    "photo": "/placeholder-avatar.svg",
+    "linkedinUrl": "#"
+  },
+  {
+    "id": 10,
+    "name": "Marcos Okita",
+    "position": "Desenvolvedor",
+    "description": "Atua no desenvolvimento de sistemas e soluções tecnológicas para o CAESoft.",
+    "photo": "/placeholder-avatar.svg",
+    "linkedinUrl": "#"
+  },
+  {
+    "id": 11,
+    "name": "Matheus Willian",
+    "position": "Desenvolvedor",
+    "description": "Responsável pelo desenvolvimento de plataformas e soluções técnicas dentro do CAESoft.",
+    "photo": "/placeholder-avatar.svg",
+    "linkedinUrl": "#"
+  },
+  {
+    "id": 12,
+    "name": "Valdemiro Facundo",
+    "position": "Multimídia",
+    "description": "Responsável pela criação de conteúdo multimídia, como vídeos e animações, para as atividades do CAESoft.",
+    "photo": "/placeholder-avatar.svg",
+    "linkedinUrl": "#"
+  },
+  {
+    "id": 13,
+    "name": "Erllon Olivier",
+    "position": "Multimídia",
+    "description": "Auxilia na criação de conteúdo multimídia e na gestão de vídeos e outros materiais audiovisuais.",
+    "photo": "/placeholder-avatar.svg",
+    "linkedinUrl": "#"
+  },
+  {
+    "id": 14,
+    "name": "Luyze Marques",
+    "position": "Ajudante",
+    "description": "Apoia as atividades administrativas e operacionais do CAESoft, prestando auxílio conforme a necessidade.",
+    "photo": "/placeholder-avatar.svg",
+    "linkedinUrl": "#"
   }
 ]
 
@@ -75,60 +151,74 @@ export const DirectorshipSection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Carrossel de cards */}
+          <Swiper
+          modules={[Pagination, Autoplay]}
+          spaceBetween={24}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 2000, 
+            disableOnInteraction: false, 
+          }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          >
             {directors.map((director) => (
-              <Card 
-                key={director.id}
-                className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-              >
-                <CardContent className="p-6 text-center">
-                  {/* Foto circular */}
-                  <div className="relative w-32 h-32 mx-auto mb-4">
-                    <div className="w-full h-full rounded-full bg-gradient-to-br from-caesoft-purple to-caesoft-green p-1">
-                      <div className="w-full h-full rounded-full bg-navy-dark overflow-hidden">
-                        <Image
-                          src={director.photo}
-                          alt={director.name}
-                          width={128}
-                          height={128}
-                          className="w-full h-full object-cover"
-                        />
+              <SwiperSlide key={director.id}>
+                <Card className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 min-h-[450px]">
+                  <CardContent className="p-6 text-center  h-full">
+                    {/* Foto circular */}
+                    <div className="relative w-32 h-32 mx-auto mb-4">
+                      <div className="w-full h-full rounded-full bg-gradient-to-br from-caesoft-purple to-caesoft-green p-1">
+                        <div className="w-full h-full rounded-full bg-navy-dark overflow-hidden">
+                          <Image
+                            src={director.photo}
+                            alt={director.name}
+                            width={128}
+                            height={128}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Nome */}
-                  <h3 className="text-xl font-bold text-caesoft-light mb-2">
-                    {director.name}
-                  </h3>
+                    {/* Nome */}
+                    <h3 className="text-xl font-bold text-caesoft-light mb-2">
+                      {director.name}
+                    </h3>
 
-                  {/* Cargo */}
-                  <Badge 
-                    variant="secondary"
-                    className="bg-caesoft-purple/20 text-caesoft-purple border border-purple-soft mb-4"
-                  >
-                    {director.position}
-                  </Badge>
+                    {/* Cargo */}
+                    <Badge
+                      variant="secondary"
+                      className="bg-caesoft-purple/20 text-caesoft-purple border border-purple-soft mb-4"
+                    >
+                      {director.position}
+                    </Badge>
 
-                  {/* Descrição */}
-                  <p className="text-light-dimmed text-sm leading-relaxed mb-6">
-                    {director.description}
-                  </p>
+                    {/* Descrição */}
+                    <p className="text-light-dimmed text-sm leading-relaxed mb-6">
+                      {director.description}
+                    </p>
 
-                  {/* Link LinkedIn */}
-                  <a
-                    href={director.linkedinUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-caesoft-purple to-caesoft-green text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
-                  >
-                    <Linkedin size={16} />
-                    <span className="text-sm font-medium">LinkedIn</span>
-                  </a>
-                </CardContent>
-              </Card>
+                    {/* Link LinkedIn */}
+                    <a
+                      href={director.linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-caesoft-purple to-caesoft-green text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
+                    >
+                      <Linkedin size={16} />
+                      <span className="text-sm font-medium">LinkedIn</span>
+                    </a>
+                  </CardContent>
+                </Card>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
 
           {/* Estatística adicional */}
           <div className="text-center mt-16">
@@ -139,7 +229,7 @@ export const DirectorshipSection = () => {
                   <h3 className="text-lg font-semibold text-caesoft-light">Gestão Ativa</h3>
                 </div>
                 <p className="text-light-dimmed text-sm">
-                  Nossa diretoria trabalha dedicadamente para representar mais de 
+                  Nossa diretoria trabalha dedicadamente para representar mais de
                   <span className="font-bold text-caesoft-purple"> 200+ estudantes</span> do curso
                 </p>
               </CardContent>
@@ -148,5 +238,5 @@ export const DirectorshipSection = () => {
         </div>
       </div>
     </Section>
-  )
-} 
+  );
+};
