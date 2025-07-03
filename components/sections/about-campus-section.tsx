@@ -139,7 +139,7 @@ export const AboutCampusSection = () => {
               <Card className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl">
                 <CardContent className="p-6 text-center">
                   <Users className="text-caesoft-purple mx-auto mb-4" size={48} />
-                  <h4 className="text-lg font-semibold text-caesoft-light mb-2">14.943</h4>
+                  <h4 className="text-lg font-semibold text-caesoft-light mb-2">17.000+</h4>
                   <p className="text-light-dimmed text-sm">Estudantes</p>
                 </CardContent>
               </Card>
@@ -147,7 +147,7 @@ export const AboutCampusSection = () => {
               <Card className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl">
                 <CardContent className="p-6 text-center">
                   <BookOpen className="text-caesoft-green mx-auto mb-4" size={48} />
-                  <h4 className="text-lg font-semibold text-caesoft-light mb-2">57</h4>
+                  <h4 className="text-lg font-semibold text-caesoft-light mb-2">132</h4>
                   <p className="text-light-dimmed text-sm">Cursos Oferecidos</p>
                 </CardContent>
               </Card>
@@ -155,7 +155,7 @@ export const AboutCampusSection = () => {
               <Card className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl">
                 <CardContent className="p-6 text-center">
                   <Building className="text-caesoft-blue mx-auto mb-4" size={48} />
-                  <h4 className="text-lg font-semibold text-caesoft-light mb-2">20</h4>
+                  <h4 className="text-lg font-semibold text-caesoft-light mb-2">23</h4>
                   <p className="text-light-dimmed text-sm">Campi no Estado</p>
                 </CardContent>
               </Card>

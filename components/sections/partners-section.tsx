@@ -168,6 +168,7 @@ export const PartnersSection = () => {
                 <Button 
                   variant="outline"
                   className="border-caesoft-green text-caesoft-green hover:bg-caesoft-green hover:text-caesoft-navy bg-transparent"
+                  onClick={() => window.open("https://chat.whatsapp.com/IWSacGd7zIiKuZRv2Kl6QG", "_blank")}
                 >
                   Ver Oportunidades
                   <Award className="ml-2" size={16} />
