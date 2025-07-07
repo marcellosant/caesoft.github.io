@@ -9,60 +9,39 @@ import { Building2, Users, Award, ExternalLink, Handshake, Globe, Zap } from "lu
 export const PartnersSection = () => {
   const partners = [
     {
-      name: "TechnoVision",
-      category: "Tecnologia",
-      description: "Empresa líder em soluções de software empresarial",
-      logo: "TV",
+      name: "Devs Norte",
+      category: "Comunidade",
+      description: "Comunidade de desenvolvedores da região Norte",
+      logo: "https://devsnorte.com/icons/logo-light.svg",
       color: "from-blue-500 to-purple-600",
-      benefits: ["Estágios", "Mentoria", "Projetos"]
+      benefits: ["Networking", "Eventos", "Mentorias"],
+      link: "https://t.me/devsnorte"
     },
     {
-      name: "CodeCraft Solutions",
-      category: "Desenvolvimento",
-      description: "Especialista em desenvolvimento de aplicações web e mobile",
-      logo: "CC",
-      color: "from-green-500 to-teal-600",
-      benefits: ["Vagas", "Workshops", "Certificações"]
+      name: "TE LIGA NA UEPA",
+      category: "Educação",
+      description: "Canal do WhatsApp extraoficial para divulgação de eventos e oportunidades.",
+      logo: "https://media.discordapp.net/attachments/1345531254757523507/1391476313570934976/476400711_1297593341494663_3607891328123552557_n.jpg?ex=686cb18d&is=686b600d&hm=e8fec5e208c95e2cc9d0422fe45f1db9420b334842609944b1cf92504afb61fa&=&format=webp&width=902&height=902",
+      color: "from-purple-500 to-indigo-600",
+      benefits: ["Integração", "Projetos", "Capacitação"],
+      link: "https://www.whatsapp.com/channel/0029Vb51w8x60eBbVwEEYN2B"
     },
     {
-      name: "DataFlow Analytics",
-      category: "Data Science",
-      description: "Análise de dados e inteligência artificial para negócios",
-      logo: "DF",
-      color: "from-orange-500 to-red-600",
-      benefits: ["Pesquisa", "Bolsas", "Laboratório"]
-    },
-    {
-      name: "CloudSync Technologies",
-      category: "Cloud Computing",
-      description: "Soluções em nuvem e infraestrutura tecnológica",
-      logo: "CS",
-      color: "from-indigo-500 to-blue-600",
-      benefits: ["Infraestrutura", "Cursos", "Suporte"]
-    },
-    {
-      name: "Startup Hub Pará",
-      category: "Empreendedorismo",
-      description: "Incubadora de startups e projetos inovadores",
-      logo: "SH",
-      color: "from-pink-500 to-purple-600",
-      benefits: ["Incubação", "Networking", "Financiamento"]
-    },
-    {
-      name: "AWS Educate",
-      category: "Educação Tech",
-      description: "Programa educacional da Amazon Web Services",
-      logo: "AWS",
-      color: "from-yellow-500 to-orange-600",
-      benefits: ["Créditos", "Treinamentos", "Certificações"]
+      name: "UEPA | Comunidade Acadêmica",
+      category: "Educação",
+      description: "Servidor do Discord extraoficial da UEPA",
+      logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGrjOiCeou-fQ/company-logo_200_200/company-logo_200_200/0/1631330379520?e=1757548800&v=beta&t=Y4mS0Ez0tTQibHPqaHgcB4CzRmVJlpPzHdLIcWFSiVw",
+      color: "from-blue-500 to-indigo-600",
+      benefits: ["Discord", "Comunidade", "Oportunidades"],
+      link: "https://discord.gg/2cShkQTXYk"
     }
   ]
 
   const partnershipStats = [
-    { icon: Building2, number: "15+", label: "Empresas Parceiras" },
-    { icon: Users, number: "50+", label: "Vagas Oferecidas" },
-    { icon: Award, number: "30+", label: "Certificações" },
-    { icon: Handshake, number: "100+", label: "Oportunidades" }
+    { icon: Building2, number: "4", label: "Parceiros Ativos" },
+    { icon: Users, number: "500+", label: "Membros Conectados" },
+    { icon: Award, number: "20+", label: "Eventos Realizados" },
+    { icon: Handshake, number: "50+", label: "Oportunidades Criadas" }
   ]
 
   return (
@@ -131,6 +110,7 @@ export const PartnersSection = () => {
                     variant="ghost" 
                     size="sm"
                     className="w-full text-caesoft-green hover:text-white hover:bg-caesoft-green/90 transition-all duration-300 mt-2"
+                    onClick={() => window.open(partner.link, "_blank")}
                   >
                     Saber Mais
                     <ExternalLink className="ml-2" size={14} />

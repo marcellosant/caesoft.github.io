@@ -232,7 +232,7 @@ export const AboutCourseSection = () => {
                 <Users className="text-caesoft-green mx-auto mb-4" size={48} />
                 <h3 className="text-xl font-semibold text-caesoft-light mb-3">4 Campi</h3>
                 <p className="text-light-dimmed">
-                  Turmas em Ananindeua, Castanhal, Redenção e Parauapebas.
+                  Turmas em Ananindeua, Castanhal, Redenção, Parauapebas e + pelo Forma Pará.
                 </p>
               </CardContent>
             </Card>
@@ -242,7 +242,7 @@ export const AboutCourseSection = () => {
                 <Lightbulb className="text-caesoft-light mx-auto mb-4" size={48} />
                 <h3 className="text-xl font-semibold text-caesoft-light mb-3">Reconhecido</h3>
                 <p className="text-light-dimmed">
-                  Curso reconhecido pelo MEC com formação sólida para pesquisa e desenvolvimento.
+                  Curso reconhecido pelo MEC com formação sólida para pesquisa, desenvolvimento, empreendedorismo e empregabilidade.
                 </p>
               </CardContent>
             </Card>
