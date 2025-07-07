@@ -38,7 +38,7 @@ export const PartnersSection = () => {
   ]
 
   const partnershipStats = [
-    { icon: Building2, number: "4", label: "Parceiros Ativos" },
+    { icon: Building2, number: "3", label: "Parceiros Ativos" },
     { icon: Users, number: "500+", label: "Membros Conectados" },
     { icon: Award, number: "20+", label: "Eventos Realizados" },
     { icon: Handshake, number: "50+", label: "Oportunidades Criadas" }
@@ -76,8 +76,16 @@ export const PartnersSection = () => {
               <Card key={index} className="glass-effect-light border-purple-soft hover:border-caesoft-purple/60 transition-all duration-300 hover:shadow-xl group">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${partner.color} rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform`}>
-                      <span className="text-white font-bold text-sm">{partner.logo}</span>
+                    <div className={`w-12 h-12 bg-gradient-to-br ${partner.color} rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform overflow-hidden`}>
+                      {partner.logo.startsWith('http') ? (
+                        <img 
+                          src={partner.logo} 
+                          alt={partner.name}
+                          className="w-full h-full object-cover rounded-xl"
+                        />
+                      ) : (
+                        <span className="text-white font-bold text-sm">{partner.logo}</span>
+                      )}
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-caesoft-light">{partner.name}</h3>
